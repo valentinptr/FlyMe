@@ -1,16 +1,19 @@
-# This is a sample Python script.
+from flylib import CalculTrajet
 
-# Press Maj+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+Vp = 100 #knots
+Vw = 5 #knots
+Dw = 180 #degres
+Trajet = [
+    [253, 9],
+    [273, 18],
+    [273, 16],
+    [273, 15],
+    [101, 17],
+    [101, 16],
+    [101, 8],
+    [61, 11],
+    [73, 9]
+]
+conso = 35 #l/h
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+CalculTrajet(Trajet, Vw, Dw, Vp, conso)
